@@ -938,7 +938,7 @@ class TCPRelayHandler(object):
             self._write_to_sock(b'\x05\00', self._local_sock)
             self._stage = STAGE_ADDR
         elif self._stage == STAGE_CONNECTING:
-            logging.DEBUG("in STAGE_CONNECTING")
+            logging.debug("in STAGE_CONNECTING")
             self._handle_stage_connecting(data)
         elif (is_local and self._stage == STAGE_ADDR) or \
                 (not is_local and self._stage == STAGE_INIT):
